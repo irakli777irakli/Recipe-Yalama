@@ -30,7 +30,7 @@ export default function SingleRecipe() {
           <img src={singleRecipe && singleRecipe[0]?.strMealThumb} alt={ singleRecipe && singleRecipe[0]?.strMeal} className="singleRecipe_img" />
         </div>
         <div className='single_recipe_stats_wrapper'>
-          {singleRecipe?.map((item)=>{
+          {singleRecipe?.map((item,i)=>{
             const {strArea: area, strInstructions: instructions, 
               strIngredient1,strIngredient2,strIngredient3,strIngredient4,strIngredient5, strSource:source,
               strMeasure1,strMeasure2,strMeasure3,strMeasure4,strMeasure5} = item;
@@ -67,7 +67,6 @@ export default function SingleRecipe() {
                  </div>
                  
                  <div className='info_addF'>
-                  <p>For Addition info <Link to={source} className="source_link">{singleRecipe[0].strMeal}</Link></p>
                   
                   {/* remove item from `singleRecipe page` and navigate Home */}
                   {inCart(id) ?  <button className='removeSingleMeal' onClick={() => {removeFromCart(id)}}>Remove</button> : <button className='addSingleMeal' onClick={() => handleCart(id)}>Add to Favorites</button>}
@@ -83,8 +82,4 @@ export default function SingleRecipe() {
   )
 }
 
-
-// style thes page
-// implement add to cart functionality
-// 
 

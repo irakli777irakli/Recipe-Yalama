@@ -307,6 +307,7 @@ footer{
   gap: 1.5rem;
   position: relative;
   flex-direction: column;
+  padding-bottom: 2.5rem;
 }
 .name_category{
   display: flex;
