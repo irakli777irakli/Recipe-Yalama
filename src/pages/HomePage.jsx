@@ -27,6 +27,7 @@ export default function HomePage() {
   return (
     <>
     <section className='homePage_init'> 
+    <div className="homePage-center">
       <h1 className='title'>Recipe Store <strong className='emph'>YalaVa</strong>, You will not go wrong here</h1>
       <div className='categories'>
       <Category cate={"Meat"} image={"https://www.themealdb.com/images/category/pork.png"}/>
@@ -44,6 +45,7 @@ export default function HomePage() {
         <FaArrowRight className='right_arrow' onClick={() => increase()}/>
 
 
+      </div>
       </div>
     </section>
     <footer >

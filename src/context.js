@@ -13,7 +13,7 @@ const AppProvider = ({children})=>{
     const [sorted,setSorted] = useState()
 
     // storing id's of recipes
-    const [cart,setCart] = useState([])
+    const [cart,setCart] = useState(localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : [])
 
     const [singleRecipe,setSingleRecipe] = useState()
 
@@ -74,6 +74,7 @@ const AppProvider = ({children})=>{
     const addToCart = (id) =>{
         if(cart.indexOf(id) === -1){
             setCart([...cart,id])
+            localStorage.setItem("Cart",JSON.stringify([...cart,id]));
         }
     }
 
@@ -81,7 +82,8 @@ const AppProvider = ({children})=>{
     const removeFromCart = async (id) =>{
     
     setCart(cart.filter((recipe)=> recipe !== id))
-    
+    localStorage.setItem("Cart",JSON.stringify(cart.filter((recipe)=> recipe !== id)));
+
     
 }
 

@@ -29,8 +29,11 @@ export default function SingleCategory() {
       setMeat(response)
     }else if(categoryName === "Fish" && fish?.length === 0){
      setFish(response)
+
     }else if(categoryName === "Vegetable" && veg?.length === 0){
       setVeg(response)
+    
+
  
     }
   }
@@ -66,6 +69,9 @@ export default function SingleCategory() {
    
   },[categoryName,sorted])
 
+
+ 
+
   return (
     <section className='single_category_init'>
        <h1>Expore <strong className='emph'>{categoryName}</strong> Category</h1>
@@ -87,38 +93,3 @@ export default function SingleCategory() {
 
 
 
-// determineWhatToMap(categoryName)?.map((item)=>{
-//   return item.meals.map((recipe)=>{
-//     const {idMeal: id, strMeal: name, strMealThumb: image,} = recipe
-//     return <article className='single_recipe' key={id}>
-//       <img src={image} alt={name} className="single_recipe_img"/>
-//       <div className='detail_add_wrapper'>
-//         <span className="s_recipe_detail" onClick={()=> handleSingleRecipe(id)}><FaSearch/></span>
-//         <span className="s_recipe_add" onClick={() => handleAdd(id)}><FaPlusCircle/></span>
-//       </div>
-//      <div className='recipe_name'>
-//         <span className='r_name'>{name}</span>
-//       </div>
-//     </article>
-//   })
-
-// }) 
-
-
-// sorted.map((item)=>{
-//   return item.map((recipe)=>{
-//     const {idMeal: id, strMeal: name, strMealThumb: image,} = recipe
-//     return (
-//       <article className='single_recipe' key={id}>
-// <img src={image} alt={name} className="single_recipe_img"/>
-// <div className='detail_add_wrapper'>
-// <span className="s_recipe_detail"><FaSearch onClick={()=> handleSingleRecipe(id)}/></span>
-// <span className="s_recipe_add" onClick={() => handleAdd(id)}><FaPlusCircle/></span>
-// </div>
-// <div className='recipe_name'>
-// <span className='r_name'>{name}</span>
-// </div>
-// </article>
-//     )
-//   })
-// })

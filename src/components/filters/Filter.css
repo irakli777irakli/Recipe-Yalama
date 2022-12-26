@@ -34,6 +34,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px){
+    .filter_wrapper>form{
+        flex-direction: column;
+    }
+}
+
 @media (max-width:548px){
     .filter_wrapper>form>input{
         padding: 0.4rem;
