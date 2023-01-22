@@ -6,6 +6,8 @@
     justify-content: center;
     background-color: #D0B8A8;
     flex-wrap: wrap;
+    position: fixed;
+    z-index: 50;
 }
 .nav_inner__div{
     display: flex;
@@ -63,7 +65,7 @@
     list-style-type: none;
     font-weight: 500;
     color: #6C4AB6;
-    background-color: #B9E0FF;
+    background-color: #d6ee7f;
     padding: 0.4rem;
     border-radius: 2px;
     transition: all 0.3s linear;
@@ -71,9 +73,8 @@
  ul > li:hover{
     transform: translateY(-2px);
     cursor: pointer;
-    color: #B9E0FF;
-    background-color: #6C4AB6;
-    box-shadow: -2px 2px 5px 1px #BCEAD5;
+    box-shadow: -2px 2px 5px 1px rgb(212, 188, 161);
+    filter: drop-shadow(4px 4px 1px rgb(236, 199, 156)) invert(20%);
 }
 .favorites_wrapper{
     position: relative;
@@ -84,13 +85,13 @@
 }
 .favorites_toggle{
     font-size: 1.5rem;
-    color: #497174;
+    color: #dd6767a1;
     transition: all 0.3s linear;
 }
 .favorites_toggle:hover{
     transform: scale(1.2,1.2);
     cursor: pointer;
-    color: #7743DB;
+    color: #e65f5fb4;
 }
 .favorites_amount_div{
     display: flex;
@@ -146,14 +147,15 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-evenly;
-        gap: 1rem;
+        justify-content: space-around;
+        
     }
     .logo_brand{
         flex:0;
-        
+        flex-direction: row;
         align-items:center;
-        justify-content: space-around;
+
+        justify-content: center;
     }
     .logo_img{
         width: 20%;
@@ -163,9 +165,10 @@
         margin-left: 20px;
     }
     ul{
-       
+       align-self: center;
         padding: 0;
-        flex-direction: column;
+        justify-content: space-around !important;
+        flex-direction: row;
     }
     .hamburger-close-btn{
         font-size: 1.5rem;
